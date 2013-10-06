@@ -1,0 +1,242 @@
+@import 'bourbon/bourbon';
+
+$base-size: 24px;
+$gr0: golden-ratio($base-size, 0);
+$gr1: golden-ratio($base-size, 1);
+$gr2: golden-ratio($base-size, 2);
+$gr3: golden-ratio($base-size, 3);
+$gr4: golden-ratio($base-size, 4);
+$gr-1: golden-ratio($base-size, -1);
+$gr-2: golden-ratio($base-size, -2);
+
+html {
+  h1, h2, h3, h4, h5 {
+    font-family: 'Pontano Sans', sans-serif;
+  }
+
+  body {
+    &, .step {
+      font-family: 'Oxygen', sans-serif;
+    }
+
+    .user-story {
+      font-family: 'Kristi', cursive;
+    }
+
+    #keep-calm {
+      span {
+        font-family: 'Spinnaker', sans-serif;
+      }
+    }
+
+  }
+
+  body {
+    background: #ddd url("../img/bg.png");
+
+    &, .step {
+      color: black;
+      text-align: center;
+    }
+
+    .slide {
+      background: white;
+
+      h1 {
+        font-weight: bold;
+        font-size: $gr2;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 60px;
+      }
+    }
+
+    strong {
+      // INFO: neccesary in order to scale. See .present section
+      display: inline-block;
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+
+    a, .slide {
+      text-shadow: none;
+    }
+
+    ol {
+      padding: $gr1;
+
+      li {
+        font-size: $gr1;
+        line-height: $gr1;
+        margin-bottom: $gr-1;
+      }
+    }
+
+    .step {
+    
+    }
+  }
+
+  .user-story {
+    background: #FFFF66;
+    padding: 120px 40px 0px 40px;
+    @include box-shadow(0 10px 5px 3px hsla(0, 0%, 0%, 0.35));
+    @include transform( rotateX(5deg) );
+    border-radius: 4px;
+    display: block;
+    height: 460px;
+    width: 900px;
+    margin: auto;
+    font-size: $gr2 + $gr0;
+    line-height: 100px;
+
+    .role, .goal, .benefit {
+      display: inline-block;
+    }
+
+    & > * {
+      display: block;
+    }
+  }
+
+  .motivator {
+    p {
+      font-size: $gr3;
+    }
+  }
+
+  img.splash {
+    width: 100%;
+  }
+
+  .present, .past {
+    $beginning: 0.1s;
+    $gap: 0.5s;
+
+    @include transition(0.5s);
+
+    strong {
+      @include transition(0.5s);
+      @include transform( translateY(-2px) scale(1.03) );
+      @include transition-delay($beginning + $gap * 1);
+    }
+
+    .user-story {
+
+      @include transition(0.5s);
+
+      .role, .goal, .benefit {
+        @include transform( translateX(10px) scale(1.06) );
+        @include transition(0.5s);
+      }
+
+      .role {
+        @include transition-delay($beginning + $gap * 1);
+      }
+      .goal {
+        @include transition-delay($beginning + $gap * 3);
+      }
+      .benefit {
+        @include transition-delay($beginning + $gap * 5);
+      }
+    }
+  }
+
+  .step {
+    width: 1100px;
+  }
+
+  ol {
+    list-style: upper-roman;
+
+    li {
+      text-align: left;
+    }
+  }
+
+  #portada {
+    text-align: center;
+    font-size: 600%;
+    line-height: 200%;
+
+    .agilecyl {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      height: 80px;
+    }
+
+    h1 {
+      margin-top: 100px;
+      font-size: 200%;
+    }
+
+    [rel='author'], li {
+      $height: 24px;
+      font-size: $height;
+      line-height: $height * 1.5;
+      height: $height * 1.5;
+    }
+
+    ul {
+      text-align: left;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+  }
+
+  $red-background: #aa0000;
+
+  #keep-calm, .tdd-red {
+    background: $red-background;
+    color: white;
+    width: 2000px;
+    height: 800px;
+  }
+
+  .tdd-red {
+    .fi-minus-circle {
+      position: relative;
+      //top: -350px;
+      top: -50px;
+      //color: $red-background;
+      color: white;
+      //opacity: .5;
+      font-size: 500px;
+      //text-shadow: 0 0 80px #ffffff;
+    }
+  }
+
+  #keep-calm {
+    padding-top: 100px;
+
+    span {
+      text-transform: uppercase;
+
+
+      $size: 100px;
+      
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      font-size: $size;
+      line-height: $size;
+
+      &.small {
+        font-size: $size / 3;
+        line-height: $size / 3;
+      }
+
+      &.fi-checkbox {
+        font-size: $size * 1.3;
+        line-height: $size * 1.3;
+      }
+
+    }
+  }
+
+  #indice {
+  }
+
+}

@@ -1,0 +1,150 @@
+html h1, html h2, html h3, html h4, html h5 {
+  font-family: 'Pontano Sans', sans-serif; }
+html body, html body .step {
+  font-family: 'Oxygen', sans-serif; }
+html body .user-story {
+  font-family: 'Kristi', cursive; }
+html body #keep-calm span {
+  font-family: 'Spinnaker', sans-serif; }
+html body {
+  background: #dddddd url("../img/bg.png"); }
+  html body, html body .step {
+    color: black;
+    text-align: center; }
+  html body .slide {
+    background: white; }
+    html body .slide h1 {
+      font-weight: bold;
+      font-size: 62.83018px;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 60px; }
+  html body strong {
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px; }
+  html body a, html body .slide {
+    text-shadow: none; }
+  html body ol {
+    padding: 38.832px; }
+    html body ol li {
+      font-size: 38.832px;
+      line-height: 38.832px;
+      margin-bottom: 14.83313px; }
+html .user-story {
+  background: #FFFF66;
+  padding: 120px 40px 0px 40px;
+  box-shadow: 0 10px 5px 3px rgba(0, 0, 0, 0.35);
+  -webkit-transform: rotateX(5deg);
+  -moz-transform: rotateX(5deg);
+  -ms-transform: rotateX(5deg);
+  -o-transform: rotateX(5deg);
+  transform: rotateX(5deg);
+  border-radius: 4px;
+  display: block;
+  height: 460px;
+  width: 900px;
+  margin: auto;
+  font-size: 86.83018px;
+  line-height: 100px; }
+  html .user-story .role, html .user-story .goal, html .user-story .benefit {
+    display: inline-block; }
+  html .user-story > * {
+    display: block; }
+html .motivator p {
+  font-size: 101.65922px; }
+html img.splash {
+  width: 100%; }
+html .present, html .past {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s; }
+  html .present strong, html .past strong {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: translateY(-2px) scale(1.03);
+    -moz-transform: translateY(-2px) scale(1.03);
+    -ms-transform: translateY(-2px) scale(1.03);
+    -o-transform: translateY(-2px) scale(1.03);
+    transform: translateY(-2px) scale(1.03);
+    -webkit-transition-delay: 0.6s;
+    -moz-transition-delay: 0.6s;
+    transition-delay: 0.6s; }
+  html .present .user-story, html .past .user-story {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s; }
+    html .present .user-story .role, html .present .user-story .goal, html .present .user-story .benefit, html .past .user-story .role, html .past .user-story .goal, html .past .user-story .benefit {
+      -webkit-transform: translateX(10px) scale(1.06);
+      -moz-transform: translateX(10px) scale(1.06);
+      -ms-transform: translateX(10px) scale(1.06);
+      -o-transform: translateX(10px) scale(1.06);
+      transform: translateX(10px) scale(1.06);
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      transition: 0.5s; }
+    html .present .user-story .role, html .past .user-story .role {
+      -webkit-transition-delay: 0.6s;
+      -moz-transition-delay: 0.6s;
+      transition-delay: 0.6s; }
+    html .present .user-story .goal, html .past .user-story .goal {
+      -webkit-transition-delay: 1.6s;
+      -moz-transition-delay: 1.6s;
+      transition-delay: 1.6s; }
+    html .present .user-story .benefit, html .past .user-story .benefit {
+      -webkit-transition-delay: 2.6s;
+      -moz-transition-delay: 2.6s;
+      transition-delay: 2.6s; }
+html .step {
+  width: 1100px; }
+html ol {
+  list-style: upper-roman; }
+  html ol li {
+    text-align: left; }
+html #portada {
+  text-align: center;
+  font-size: 600%;
+  line-height: 200%; }
+  html #portada .agilecyl {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    height: 80px; }
+  html #portada h1 {
+    margin-top: 100px;
+    font-size: 200%; }
+  html #portada [rel='author'], html #portada li {
+    font-size: 24px;
+    line-height: 36px;
+    height: 36px; }
+  html #portada ul {
+    text-align: left;
+    position: absolute;
+    right: 10px;
+    bottom: 10px; }
+html #keep-calm, html .tdd-red {
+  background: #aa0000;
+  color: white;
+  width: 2000px;
+  height: 800px; }
+html .tdd-red .fi-minus-circle {
+  position: relative;
+  top: -50px;
+  color: white;
+  font-size: 500px; }
+html #keep-calm {
+  padding-top: 100px; }
+  html #keep-calm span {
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100px; }
+    html #keep-calm span.small {
+      font-size: 33.33333px;
+      line-height: 33.33333px; }
+    html #keep-calm span.fi-checkbox {
+      font-size: 130px;
+      line-height: 130px; }
