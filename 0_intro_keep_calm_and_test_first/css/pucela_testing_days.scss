@@ -118,7 +118,12 @@ html {
     strong {
       @include transition(0.5s);
       @include transform( translateY(-2px) scale(1.03) );
-      @include transition-delay($beginning + $gap * 1);
+      @include transition-delay($beginning + $gap * 2);
+    }
+
+    .tdd-red {
+      @include transition(0.5);
+      @include transform( scale(1) );
     }
 
     .user-story {
@@ -198,13 +203,9 @@ html {
   .tdd-red {
     .fi-minus-circle {
       position: relative;
-      //top: -350px;
       top: -50px;
-      //color: $red-background;
       color: white;
-      //opacity: .5;
       font-size: 500px;
-      //text-shadow: 0 0 80px #ffffff;
     }
   }
 
@@ -213,7 +214,6 @@ html {
 
     span {
       text-transform: uppercase;
-
 
       $size: 100px;
       
