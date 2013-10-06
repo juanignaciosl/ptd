@@ -14,7 +14,6 @@ html body {
   html body .slide {
     background: white; }
     html body .slide h1 {
-      font-weight: bold;
       font-size: 62.83018px;
       display: block;
       margin-top: 10px;
@@ -121,8 +120,10 @@ html #portada {
     left: 10px;
     height: 80px; }
   html #portada h1 {
+    font-family: 'Paytone One', sans-serif;
     margin-top: 100px;
-    font-size: 200%; }
+    font-size: 430.60825px;
+    color: #aa0000; }
   html #portada [rel='author'], html #portada li {
     font-size: 24px;
     line-height: 36px;

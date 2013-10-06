@@ -5,9 +5,11 @@ $gr0: golden-ratio($base-size, 0);
 $gr1: golden-ratio($base-size, 1);
 $gr2: golden-ratio($base-size, 2);
 $gr3: golden-ratio($base-size, 3);
-$gr4: golden-ratio($base-size, 4);
+$gr6: golden-ratio($base-size, 6);
 $gr-1: golden-ratio($base-size, -1);
 $gr-2: golden-ratio($base-size, -2);
+
+$red-background: #aa0000;
 
 html {
   h1, h2, h3, h4, h5 {
@@ -43,7 +45,6 @@ html {
       background: white;
 
       h1 {
-        font-weight: bold;
         font-size: $gr2;
         display: block;
         margin-top: 10px;
@@ -172,8 +173,10 @@ html {
     }
 
     h1 {
+      font-family: 'Paytone One', sans-serif;
       margin-top: 100px;
-      font-size: 200%;
+      font-size: $gr6;
+      color: $red-background;
     }
 
     [rel='author'], li {
@@ -190,8 +193,6 @@ html {
       bottom: 10px;
     }
   }
-
-  $red-background: #aa0000;
 
   #keep-calm, .tdd-red {
     background: $red-background;
