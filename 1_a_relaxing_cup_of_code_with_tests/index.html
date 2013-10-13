@@ -4,12 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Pucela Testing Days, día 0: Keep Calm and Test First</title>
+    <title>PTD #1: A Relaxing Cup of Code with Tests</title>
     
     <meta name="description" content="Introducción al testing y a los diferentes conceptos que le rodean: mocks, stubs, TDD, BDD, ATDD..." />
     <meta name="author" content="Juan Ignacio Sánchez Lara" />
 
     <link href='http://fonts.googleapis.com/css?family=Kristi|Pontano+Sans|Oxygen|Spinnaker|Paytone+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Mono|Anonymous+Pro' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
     <link href="../resources/css/foundation-icons/foundation-icons.css" rel="stylesheet" />
@@ -41,6 +42,8 @@
     </div>
 
     <div class="step" id="keep-calm" data-x="2000" data-rotate="90" data-z="1200"  >
+      <div class="speaker-notes">Vamos a hablar de por qué hacemos tests, y lo fundamental es que pretenden cambiar el sentido de urgencia, de ahí la elección del chiste malo.</div>
+
       <span class="fi-check icon"></li>
       <span class="small">A</span>
       <span>relaxing cup</span>
@@ -50,63 +53,217 @@
       <span>tests</span>
     </div>
 
-</div>
+    <div class="step test" data-x="4000">
+      <span class="code annotation">@Test</span>
+      <p class="small">¿Sabes que un test puede ayudar a mejorar tu <strong>calidad de vida</strong>?</p>
+    </div>
 
-<!--
-    When the presentation step is shown (selected) its element gets the class of "active" and the body element
-    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
-    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
-    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
-    
-    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
-    the first step of presentation is visible for a couple of seconds.
-    
-    ...
-    
-    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
-    It's just a quick and dirty workaround to get different hint text for touch devices.
-    In a real world it should be at least placed in separate JS file ... and the touch content should be
-    probably just hidden somewhere in HTML - not hard-coded in the script.
-    
-    Just sayin' ;)
-    
--->
-<div class="hint">
-    <p>Use a spacebar or arrow keys to navigate</p>
+    <div class="step tdd-red" data-x="6000"  data-rotate="90">
+      <span class="fi-minus-circle"></span>
+    </div>
+
+    <div class="step poll" data-x="20000" data-scale="10">
+      <div class="speaker-notes">Queremos que los asistentes se impliquen, sientan que realmente les puede ayudar. Por tanto, pediremos que levanten la mano "todos los desarrolladores de software que haya en la sala" (incluyendo product owners). A continuación, con cada motivator hablaremos de una problemática que podemos abordar con los tests. Quien lo haya sufrido en los últimos meses puede bajar la mano.</div>
+
+    </div>
+
+    <div class="step motivator" data-x="16000" data-y="-2100">
+      <div class="speaker-notes">Hablaremos de la incorrección y desactualización de la documentación, en términos tanto de requisitos como APIs.</div>
+
+      <img src="../resources/img/joys/documentacion.gif">
+      <h1>Documentación</h1>
+      <h2>Mintiendo desde los 40's</h2>
+    </div>
+
+    <div class="step motivator" data-x="17600" data-y="-2100">
+      <div class="speaker-notes">Lo engañoso de los problemas, producidos por un complejo diseño, por ejemplo.</div>
+
+      <img src="../resources/img/joys/charco.gif">
+      <h1>Pequeños bugs</h1>
+      <h2>"Esto lo corrijo en 5 minutos"</h2>
+    </div>
+
+    <div class="step motivator" data-x="19200" data-y="-2100">
+      <div class="speaker-notes">¿Cuántas veces hacemos algo y estropeamos otra cosa? Ojo, esto no es malo sólo por el fallo, sino que además nos condiciona para después, porque vamos a estar reacios a hacer cosas.</div>
+
+      <img src="../resources/img/joys/efecto-secundario.gif">
+      <h1>Side effects<h1>
+      <h2>Porque a todos se nos va la mano</h2>
+    </div>
+
+    <div class="step motivator" data-x="20800" data-y="-2100">
+      <div class="speaker-notes">Sobran las explicaciones: caemos en código que no queremos tocar ni con un palo.</div>
+
+      <img src="../resources/img/joys/legacy.gif">
+      <h1>Legacy code<h1>
+      <h2>Montañas de mierda que nadie ha generado</h2>
+    </div>
+
+    <div class="step motivator" data-x="22400" data-y="-2100">
+      <div class="speaker-notes">Te pones a solucionar un problema y aparecen 500 más.</div>
+
+      <img src="../resources/img/joys/muchos-bugs.gif">
+      <h1>Bug hunting<h1>
+      <h2>Un bug nunca va solo</h2>
+    </div>
+
+    <div class="step motivator" data-x="24000" data-y="-2100">
+      <div class="speaker-notes">El miedo a romper.</div>
+
+      <img src="../resources/img/joys/salto-hielo.gif">
+      <h1>Fragilidad</h1>
+      <h2><em>Sé</em> que si toco ahí lo rompo</h2>
+    </div>
+
+    <div class="step " data-x="20000" data-scale="10" data-z="-100">
+      <span class="big-question">... cómo?</span>
+    </div>
+
+    <div class="step quote" data-x="30000">
+      <div class="speaker-notes">Tenemos que cambiar nuestro método de trabajo. Las personas nos equivocamos, necesitamos una red de seguridad. Es normal que no querramos "tocar lo que funciona", aunque esté mal, por miedo. Es normal que la documentación no se actualice... El testing aborda varios problemas sistémicos de nuestro trabajo, por nuestra propia naturaleza.</div>
+
+      <p>95% of the problems in business are <strong>system driven</strong> and only 5% are <strong>people driven</strong></p>
+      <span class="author">Deming</span>
+    </div>
+
+    <div class="step reference-excerpt" data-x="32000">
+      <div class="speaker-notes">Hablar brevemente de las diferentes dimensiones y tipos de testing</div>
+
+      <img class="splash" src="../resources/img/agile-testing-quadrants.jpg" />
+      <a class="book" href="http://lisacrispin.com/agile-testing-book-is-now-out/">Agile Testing, Lisa Crispin</a>
+    </div>
+
+    <div class="step tests" data-x="32000" data-z="1000">
+      <div class="speaker-notes">Introducir brevemente los grandes bloques a presentar</div>
+
+      <h1>Unit testing</h1>
+      <h2>[Unidades individuales de código]</h2>
+      <ul>
+        <li>Simplifica el diseño</li>
+        <li>Facilita el cambio</li>
+        <li>Documenta</li>
+      </ul>
+    </div>
+
+    <div class="step tests" data-x="32000" data-z="2000">
+      <h1>Integration testing</h1>
+      <h2>[Coordinación entre componentes]</h2>
+      <ul>
+        <li>Verifica integración</li>
+      </ul>
+    </div>
+
+    <div class="step tests" data-x="32000" data-z="3000">
+      <h1>End-to-end</h1>
+      <h2>[Usuario final]</h2>
+      <ul>
+        <li>Simulación* de usuario</li>
+      </ul>
+    </div>
+
+    <div class="step tests" data-x="32000" data-z="4000">
+      <h1>TDD</h1>
+      <h2>[Desarrollo dirigido por tests]<h2>
+      <ul>
+        <li>Método de trabajo</li>
+        <li>"Doble contabilidad"</li>
+        <li>Certeza* de corrección</li>
+      </ul>
+    </div>
+
+    <div class="step tests" data-x="32000" data-z="5000">
+      <h1>ATDD</h1>
+      <h2>[Desarrollo dirigido por tests de aceptación]<h2>
+      <ul>
+        <li>Comunicación con el usuario</li>
+      </ul>
+    </div>
+
+    <div class="step tests" data-x="32000" data-z="6000">
+      <div class="speaker-notes">Aquí los "novatos" se estarán empezando a agobiar por la de cosas que hemos contado, así que rematemos pasando muy rápido por los siguientes términos para que quede claro que hay mucho que aprender, pero que podemos irlo haciendo poco a poco y no merece la pena agobiarse.</div>
+
+      <h1>Mocks</h1>
+    </div>
+
+    <div class="step tests" data-x="32000" data-z="8000">
+      <div class="speaker-notes">Ni comentar</div>
+
+      <h1>Stubs</h1>
+    </div>
+
+    <div class="step tests" data-x="32000" data-z="10000">
+      <div class="speaker-notes">Ni comentar</div>
+
+      <h1>Spies</h1>
+    </div>
+
+    <div class="step tests" data-x="32000" data-z="12000">
+      <div class="speaker-notes">Ni comentar</div>
+
+      <h1>TestDataBuilders</h1>
+    </div>
+
+    <div class="step tests" data-x="32000" data-z="14000">
+      <div class="speaker-notes">Aquí paramos a respirar, y explicamos que esto se puede aprender poco a poco.</div>
+
+      <h1>...</h1>
+    </div>
+
+    <div class="step poll " data-x="34000" data-z="14000">
+      <span class="not-so-big-question">¿Merece la pena?</span>
+    </div>
+
+    <div class="step no-silver-bullet" data-x="34000" data-z="13900" data-rotate-y="180">
+      <div class="speaker-notes">Vaya por delante que esto no es una bala de plata...</div>
+
+      <h1>No silver bullet</h1>
+      <img src="../resources/img/no-silver-bullet.jpg" />
+    </div>
+
+    <div class="step" data-x="34000" data-y="1000" data-z="13900" data-rotate-y="180">
+      <h1>... pero ...</h1>
+    </div>
+
+    <div class="step quote" data-x="34000" data-y="2000" data-z="14000" data-rotate-y="180">
+      <div class="speaker-notes">Hacer TDD es muy productivo y rápido</div>
+
+      <p>Programming and testing together is faster than just programming. (...) The gain comes from a reduction in the time spent debugging.</p>
+      <span class="author">Kent Beck, XP Explained</span>
+    </div>
+
+    <div class="step quote" data-x="36000" data-y="2000" data-z="14000" data-rotate-y="180">
+      <div class="speaker-notes">Para quien quiera un estudio con una apariencia más ingenieril, los hay, aunque es algo muy difícil de medir (principio de incertidumbre...)</div>
+
+      <ul>
+        <li>Defectos: <span class="fi-arrow-down"></span> 40%-90%</li>
+        <li>Coste inicial: <span class="fi-arrow-up"></span> 15%-35%</li>
+      </ul>
+      <a class="author" href="http://www.infoq.com/news/2009/03/TDD-Improves-Quality">Microsoft, IBM, Empirical Software Engineering journal...</a>
+    </div>
+
+    <div class="step quote" data-x="38000" data-y="2000" data-z="14000" data-rotate-y="180">
+      <p>To me, legacy code is simply code without tests.</p>
+      <a class="author">Michael C. Feathers, "Working Effectively with Legacy Code"</a>
+    </div>
+
+    <div class="step motivator" data-x="50000" data-y="2000" data-z="14000" data-rotate-y="180">
+      <div class="speaker-notes">... el testing es El Bien, pero hay que hacerlo bien</div>
+
+      <img src="../resources/img/joys/pistola-en-la-boca.gif">
+      <h1>Test right</h1>
+      <h2>No eches la culpa al arma...</h2>
+    </div>
+
+
+
+
+
+
+
 </div>
-<script>
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-}
-</script>
 
 <script src="../resources/js/impress.js"></script>
 <script>impress().init();</script>
-
-<!--
-    
-    The `impress()` function also gives you access to the API that controls the presentation.
-    
-    Just store the result of the call:
-    
-        var api = impress();
-    
-    and you will get three functions you can call:
-    
-        `api.init()` - initializes the presentation,
-        `api.next()` - moves to next step of the presentation,
-        `api.prev()` - moves to previous step of the presentation,
-        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
-                id or the DOM element; second parameter can be used to define duration of the transition in ms,
-                but it's optional - if not provided default transition duration for the presentation will be used.
-    
-    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
-    Don't worry, it wont initialize the presentation again.
-    
-    For some example uses of this API check the last part of the source of impress.js where the API
-    is used in event handlers.
-    
--->
 
 </body>
 </html>
