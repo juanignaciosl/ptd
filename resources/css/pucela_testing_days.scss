@@ -112,7 +112,7 @@ html {
     }
 
     strong {
-      // INFO: neccesary in order to scale. See .present section
+      // INFO: scaling. See .present section
       display: inline-block;
       margin-left: 4px;
       margin-right: 4px;
@@ -263,7 +263,6 @@ html {
       strong + strong + strong + strong + strong + strong {
         @include transition-delay($beginning + $gap * 12);
       }
-
 
       .tdd-red {
         @include transition(0.5);
