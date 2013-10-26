@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>PTD A: referencias</title>
+    
+    <meta name="description" content="Introducción al testing y a los diferentes conceptos que le rodean: mocks, stubs, TDD, BDD, ATDD..." />
+    <meta name="author" content="Juan Ignacio Sánchez Lara" />
+
+    <link href='http://fonts.googleapis.com/css?family=Kristi|Pontano+Sans|Oxygen|Spinnaker|Paytone+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Mono|Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="../resources/css/foundation-icons/foundation-icons.css" rel="stylesheet" />
+    <link href="../resources/css/impress-demo.css" rel="stylesheet" />
+    <link href="../resources/css/pucela_testing_days.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+  <p>Tú molas, pero tu navegador no tanto. Para que funcione la presentación como te mereces tienes que abrirla con <b>Chrome</b>, <b>Safari</b> o <b>Firefox</b>.</p>
+</div>
+
+<div id="impress">
+
+    <div class="step slide" id="empezamos" data-x="10000">
+      <h1>BDD</h1>
+      <ul>
+        <li><a href="http://dannorth.net/introducing-bdd/">Dan North - Introducing BDD</a></li>
+        <li><a href="http://lizkeogh.com/2009/11/06/translating-tdd-to-bdd/">Translating TDD to BDD</a></li>
+      </ul>
+    </div>
+
+</div>
+
+<script src="../resources/js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
