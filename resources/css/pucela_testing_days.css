@@ -6,6 +6,10 @@ html body {
   html body a, html body a:hover {
     background: none;
     padding: 0; }
+  html body a.github {
+    display: inline-block;
+    padding-top: 500px;
+    background: url("../img/github.png") 50% no-repeat; }
   html body, html body .step {
     font-family: 'Oxygen', sans-serif; }
   html body .user-story {

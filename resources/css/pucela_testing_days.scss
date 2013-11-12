@@ -41,6 +41,12 @@ html {
       padding: 0;
     }
 
+    a.github {
+      display: inline-block;
+      padding-top: 500px;
+      background: url("../img/github.png") 50% no-repeat;
+    }
+
     &, .step {
       font-family: 'Oxygen', sans-serif;
     }
