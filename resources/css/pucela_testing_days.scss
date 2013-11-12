@@ -382,6 +382,24 @@ html {
       }
     }
 
+    ul.books {
+      li {
+        display: inline-block;
+        margin: 0 $gr1;
+      }
+
+      img.cover {
+        height: 300px;
+      }
+    }
+
+    &.references {
+      ul li a {
+        border-bottom-width: 1px;
+        border-bottom-style: dotted;
+      }
+    }
+
     #keep-calm {
       padding-top: 100px;
 

@@ -254,6 +254,14 @@ html body {
       padding: 4px;
       border: 2px solid white;
       height: 400px; }
+  html body ul.books li {
+    display: inline-block;
+    margin: 0 38.832px; }
+  html body ul.books img.cover {
+    height: 300px; }
+  html body.references ul li a {
+    border-bottom-width: 1px;
+    border-bottom-style: dotted; }
   html body #keep-calm {
     padding-top: 100px; }
     html body #keep-calm span {
