@@ -354,6 +354,8 @@ html {
 
     .motivator {
       background: $black;
+      width: 1000px;
+      height: 700px;
 
       h1, h2 {
         color: $white;
@@ -370,9 +372,6 @@ html {
         font-family: 'Arial', sans-serif;
         font-size: 28px;
       }
-
-      width: 1000px;
-      height: 700px;
       
       img {
         display: inline-block;
