@@ -39,12 +39,26 @@ html {
     a, a:hover {
       background: none;
       padding: 0;
+
+      &.github {
+        display: inline-block;
+        padding-top: 500px;
+        background: url("../img/github.png") 50% no-repeat;
+      }
+
+      &.source {
+        font-size: $gr1;
+        float: right;
+        display: inline-block;
+        color: $dark-grey;
+        &:before {
+          content: "Fuente: ";
+        }
+      }
     }
 
-    a.github {
-      display: inline-block;
-      padding-top: 500px;
-      background: url("../img/github.png") 50% no-repeat;
+    li {
+      font-size: $gr1;
     }
 
     &, .step {
@@ -74,6 +88,17 @@ html {
         text-align: left;
         color: $annotation-color;
         margin-bottom: 0;
+      }
+
+      &.tag {
+        font-weight: bold;
+        display: inline-block;
+        margin: $gr1;
+        
+        &:before {
+          content: "$git checkout ";
+          font-weight: normal;
+        }
       }
     }
 

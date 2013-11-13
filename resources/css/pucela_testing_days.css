@@ -6,10 +6,19 @@ html body {
   html body a, html body a:hover {
     background: none;
     padding: 0; }
-  html body a.github {
-    display: inline-block;
-    padding-top: 500px;
-    background: url("../img/github.png") 50% no-repeat; }
+    html body a.github, html body a:hover.github {
+      display: inline-block;
+      padding-top: 500px;
+      background: url("../img/github.png") 50% no-repeat; }
+    html body a.source, html body a:hover.source {
+      font-size: 38.832px;
+      float: right;
+      display: inline-block;
+      color: #444444; }
+      html body a.source:before, html body a:hover.source:before {
+        content: "Fuente: "; }
+  html body li {
+    font-size: 38.832px; }
   html body, html body .step {
     font-family: 'Oxygen', sans-serif; }
   html body .user-story {
@@ -27,6 +36,13 @@ html body {
       text-align: left;
       color: #444444;
       margin-bottom: 0; }
+    html body .code.tag {
+      font-weight: bold;
+      display: inline-block;
+      margin: 38.832px; }
+      html body .code.tag:before {
+        content: "$git checkout ";
+        font-weight: normal; }
   html body .step.quote {
     background-image: url(../img/quote.svg);
     background-position: 10% 0;
