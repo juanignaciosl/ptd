@@ -36,6 +36,12 @@ html {
       font-family: 'Pontano Sans', sans-serif;
     }
 
+    h1 {
+      font-size: $gr2;
+      margin-bottom: $gr0;
+      font-weight: bold;
+    }
+
     a, a:hover {
       background: none;
       padding: 0;
@@ -69,6 +75,14 @@ html {
       font-family: 'Kristi', cursive;
     }
 
+    .side-note {
+      font-size: 70%;
+      color: $dark-grey;
+      margin-top: $gr0;
+      width: 100%;
+      text-align: right;
+    }
+
     #keep-calm {
       span {
         font-family: 'Spinnaker', sans-serif;
@@ -96,9 +110,19 @@ html {
         margin: $gr1;
         
         &:before {
-          content: "$git checkout ";
+          content: "$ git checkout ";
           font-weight: normal;
         }
+      }
+
+      &.command-line {
+        &:before {
+          content: "$ ";
+        }
+      }
+
+      &.long {
+        font-size: 80%;
       }
     }
 
@@ -123,6 +147,60 @@ html {
         font-size: 75%;
         text-align: right;
         color: $quote-author-color;
+      }
+    }
+
+    .step.quote.dialog {
+      background-repeat: no-repeat;
+      background-size: 450px;
+      background-position: top left;
+      padding-top: 250px;
+      padding-bottom: 250px;
+
+      .from {
+        font-weight: bold;
+
+        &:before {
+          content: "From: ";
+          font-weight: normal;
+        }
+      }
+
+      p {
+        background-image: url(../img/quote.svg);
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 150px;
+        padding-left: 180px;
+        margin-left: 0;
+        width: 80%;
+
+        &.long {
+          font-size: 80%;
+        }
+      }
+
+      &.product_owner {
+        background-image: url(../img/breaking_bad/gustavo_do_it.gif);
+
+        .from {
+          &:after {
+            content: " [product owner]";
+            font-weight: normal;
+          }
+        }
+      }
+
+      &.lead_developer {
+        background-image: url(../img/breaking_bad/heisenberg.gif);
+        background-position: bottom right;
+
+        .from {
+          &:after {
+            content: " [lead developer]";
+            font-weight: normal;
+          }
+        }
       }
     }
 
@@ -237,7 +315,8 @@ html {
     }
 
     img.splash {
-      width: 100%;
+      max-width: 100%;
+      max-height: 50%;
     }
 
     .reference-excerpt {

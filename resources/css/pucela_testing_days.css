@@ -3,6 +3,10 @@ html body {
   background: #dddddd url("../img/bg.png"); }
   html body h1, html body h2, html body h3, html body h4, html body h5 {
     font-family: 'Pontano Sans', sans-serif; }
+  html body h1 {
+    font-size: 62.83018px;
+    margin-bottom: 24px;
+    font-weight: bold; }
   html body a, html body a:hover {
     background: none;
     padding: 0; }
@@ -23,6 +27,12 @@ html body {
     font-family: 'Oxygen', sans-serif; }
   html body .user-story {
     font-family: 'Kristi', cursive; }
+  html body .side-note {
+    font-size: 70%;
+    color: #444444;
+    margin-top: 24px;
+    width: 100%;
+    text-align: right; }
   html body #keep-calm span {
     font-family: 'Spinnaker', sans-serif; }
   html body .code {
@@ -41,8 +51,12 @@ html body {
       display: inline-block;
       margin: 38.832px; }
       html body .code.tag:before {
-        content: "$git checkout ";
+        content: "$ git checkout ";
         font-weight: normal; }
+    html body .code.command-line:before {
+      content: "$ "; }
+    html body .code.long {
+      font-size: 80%; }
   html body .step.quote {
     background-image: url(../img/quote.svg);
     background-position: 10% 0;
@@ -61,6 +75,38 @@ html body {
       font-size: 75%;
       text-align: right;
       color: #444444; }
+  html body .step.quote.dialog {
+    background-repeat: no-repeat;
+    background-size: 450px;
+    background-position: top left;
+    padding-top: 250px;
+    padding-bottom: 250px; }
+    html body .step.quote.dialog .from {
+      font-weight: bold; }
+      html body .step.quote.dialog .from:before {
+        content: "From: ";
+        font-weight: normal; }
+    html body .step.quote.dialog p {
+      background-image: url(../img/quote.svg);
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: 150px;
+      padding-left: 180px;
+      margin-left: 0;
+      width: 80%; }
+      html body .step.quote.dialog p.long {
+        font-size: 80%; }
+    html body .step.quote.dialog.product_owner {
+      background-image: url(../img/breaking_bad/gustavo_do_it.gif); }
+      html body .step.quote.dialog.product_owner .from:after {
+        content: " [product owner]";
+        font-weight: normal; }
+    html body .step.quote.dialog.lead_developer {
+      background-image: url(../img/breaking_bad/heisenberg.gif);
+      background-position: bottom right; }
+      html body .step.quote.dialog.lead_developer .from:after {
+        content: " [lead developer]";
+        font-weight: normal; }
   html body, html body .step {
     color: black;
     text-align: center; }
@@ -132,7 +178,8 @@ html body {
       html body .test p.small {
         font-size: 62.83018px; }
   html body img.splash {
-    width: 100%; }
+    max-width: 100%;
+    max-height: 50%; }
   html body .reference-excerpt img.splash {
     height: 50%;
     width: auto; }
