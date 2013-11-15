@@ -65,6 +65,10 @@ html {
 
     li {
       font-size: $gr1;
+
+      &.icon:before {
+        margin-right: 10px;
+      }
     }
 
     &, .step {
@@ -317,6 +321,10 @@ html {
     img.splash {
       max-width: 100%;
       max-height: 50%;
+
+      &.bigger {
+        width: 80%;
+      }
     }
 
     .reference-excerpt {
