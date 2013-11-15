@@ -21,9 +21,14 @@ html body {
       color: #444444; }
       html body a.source:before, html body a:hover.source:before {
         content: "Fuente: "; }
-  html body li {
+  html body ul.acronym {
+    text-align: left;
+    margin-left: 300px; }
+    html body ul.acronym li {
+      font-size: 62.83018px; }
+  html body ul li {
     font-size: 38.832px; }
-    html body li.icon:before {
+    html body ul li.icon:before {
       margin-right: 10px; }
   html body, html body .step {
     font-family: 'Oxygen', sans-serif; }
@@ -292,7 +297,7 @@ html body {
     background: #aa0000;
     color: white;
     width: 2000px;
-    height: 800px; }
+    height: 900px; }
   html body .tdd-red .fi-minus-circle {
     position: relative;
     top: -50px;

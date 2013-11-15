@@ -63,11 +63,21 @@ html {
       }
     }
 
-    li {
-      font-size: $gr1;
+    ul {
+      &.acronym {
+        text-align: left;
+        margin-left: 300px;
+        li {
+          font-size: $gr2;
+        }
+      }
 
-      &.icon:before {
-        margin-right: 10px;
+      li {
+        font-size: $gr1;
+
+        &.icon:before {
+          margin-right: 10px;
+        }
       }
     }
 
@@ -446,7 +456,7 @@ html {
       background: $red-background;
       color: white;
       width: 2000px;
-      height: 800px;
+      height: 900px;
     }
 
     .tdd-red {
