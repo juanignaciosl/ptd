@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>PTD #3: Dobles de prueba</title>
+    <meta name="description" content="Introducción al testing y a los diferentes conceptos que le rodean: mocks, stubs, TDD, BDD, ATDD..." />
+    <meta name="author" content="Juan Ignacio Sánchez Lara && Javier Gamarra" />
+
+    <link href='http://fonts.googleapis.com/css?family=Kristi|Pontano+Sans|Oxygen|Spinnaker|Paytone+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Mono|Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="../resources/css/foundation-icons/foundation-icons.css" rel="stylesheet" />
+    <link href="../resources/css/impress-demo.css" rel="stylesheet" />
+    <link href="../resources/css/pucela_testing_days.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+  <p>Tú molas, pero tu navegador no tanto. Para que funcione la presentación como te mereces tienes que abrirla con <b>Chrome</b>, <b>Safari</b> o <b>Firefox</b>.</p>
+</div>
+
+<div id="impress">
+
+    <div class="step slide" id="portada" data-x="0"  data-z="1200"  >
+      <h1>PTD</h1>
+      <h2>Pucela Testing Days</h2>
+
+      <img src="../resources/img/agilecyl.png" class="agilecyl" />
+
+      <ul>
+        <li><a rel="author" href="http://www.nhpatt.com">Javier Gamarra ::: @nhpatt</a></li>
+        <li><a rel="author" href="http://www.juanignaciosl.com">Juan Ignacio Sánchez ::: @juanignaciosl</a></li>
+      </ul>
+    </div>
+
+
+    <div class="step" id="keep-calm" data-x="2000" data-rotate="90" >
+        <span class="fi-wrench icon"></span>
+        <span>DOBLES</span>
+        <span class="small">y</span>
+        <span>otras herramientas</span>
+    </div>
+
+    <div class="step test" data-x="4000">
+      <span class="code annotation">@Test</span>
+      <p class="small">Los desarrolladores conocen los <strong>dobles de prueba</strong> y patrones como <strong>TestDataBuilder</strong></p>
+    </div>
+
+    <div class="step tdd-red" data-x="6000" data-rotate="90">
+      <span class="fi-minus-circle"></span>
+    </div>
+
+    <div class="step" data-x="8000">
+        <div class="speaker-notes">Cuando queremos probar algo y es complicado podemos necesitar ayuda. Hay muchos dobles de prueba</div>
+        <img class="splash" src="../resources/img/doubles/BradPitt.jpg">
+        <h1>Dobles de prueba</h1>
+    </div>
+
+    <div class="step" data-x="10000">
+      <div class="speaker-notes">¿Qué mejor que ver por qué los necesitamos?</div>
+      <h1>Let's code!</h1>
+      <img class="splash" src="../resources/img/joys/programando.gif">
+    </div>
+
+    <div class="step" data-x="12000">
+      <a href="http://github.com/nhpatt/ptd-doubles" class="github">github.com/nhpatt/ptd-doubles</a>
+    </div>
+
+    <div class="step" data-x="14000">
+      <dl>
+        <dt class="code tag">000-base</dt>
+        <dd>Queremos probar algo complicado...</dd>
+      </dl>
+    </div>
+
+    <div class="step" data-x="16000">
+        <div class="speaker-notes">Dummy!</div>
+        <dl>
+            <dt class="code tag">010-dummies</dt>
+            <dd>Simular objetos</dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="18000">
+        <img class="splash" src="../resources/img/doubles/HarrisonFord.jpg">
+        <h1>No es sólo eso</h1>
+    </div>
+
+    <div class="step" data-x="20000">
+        <dl>
+            <dt class="code tag">020-stubs</dt>
+            <dd>Devolver valores</dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="22000">
+        <img class="splash" src="../resources/img/doubles/JenniferLopez.jpg">
+        <h1>No siempre sale todo bien</h1>
+    </div>
+
+    <div class="step" data-x="24000">
+        <dl>
+            <dt class="code tag">030-stubs_saboteando</dt>
+            <dd>Probar situaciones de error</dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="26000">
+    <dl>
+        <dt class="code tag">040-mocks</dt>
+        <dd>Probar <strong>comportamiento</strong></dd>
+    </dl>
+    </div>
+
+    <div class="step" data-x="28000">
+        <dl>
+            <dt class="code tag">050-spies</dt>
+            <dd>Grabar lo que hace el método</dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="30000">
+        <img class="splash" src="../resources/img/doubles/JackieChan.jpg">
+        <h1>Alguno pensará... me gusta hacerlo sólo</h1>
+    </div>
+
+    <div class="step" data-x="32000">
+        <dl>
+            <dt class="code tag">060-fixtures</dt>
+            <dd>Establecer valores iniciales</dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="34000">
+    <dl>
+        <dt class="code tag">070-fixtures_automaticos</dt>
+        <dd>Cargar valores iniciales de ficheros</dd>
+    </dl>
+    </div>
+
+    <div class="step" data-x="36000">
+        <dl>
+            <dt class="code tag">080-testdatabuilders</dt>
+            <dd>Crear objetos con variaciones fácilmente</dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="38000">
+      <h1>Hay infinitas herramientas para...</h1>
+      <p>Espiar objetos ajenos...</p>
+      <p>Testing grabado en GUI...</p>
+      <p>Monkey Testing</p>
+    </div>
+
+</div>
+
+<script src="../resources/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
