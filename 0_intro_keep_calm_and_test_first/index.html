@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>PTD #0: Keep Calm and Test First</title>
+    
+    <meta name="description" content="Introducción al testing y a los diferentes conceptos que le rodean: mocks, stubs, TDD, BDD, ATDD..." />
+    <meta name="author" content="Juan Ignacio Sánchez Lara" />
+
+    <link href='http://fonts.googleapis.com/css?family=Kristi|Pontano+Sans|Oxygen|Spinnaker|Paytone+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Mono|Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="../resources/css/foundation-icons/foundation-icons.css" rel="stylesheet" />
+    <link href="../resources/css/impress-demo.css" rel="stylesheet" />
+    <link href="../resources/css/pucela_testing_days.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+  <p>Tú molas, pero tu navegador no tanto. Para que funcione la presentación como te mereces tienes que abrirla con <b>Chrome</b>, <b>Safari</b> o <b>Firefox</b>.</p>
+</div>
+
+<div id="impress">
+
+    <div class="step slide" id="portada" data-x="0"  data-z="1200"  >
+      <div class="speaker-notes"></div>
+
+      <h1>PTD</h2>
+      <h2>Pucela Testing Days</h2>
+
+      <img src="../resources/img/agilecyl.png" class="agilecyl" />
+
+      <ul>
+        <li><a rel="author" href="http://www.nhpatt.com">Javier Gamarra ::: @nhpatt</a></li>
+        <li><a rel="author" href="http://www.juanignaciosl.com">Juan Ignacio Sánchez ::: @juanignaciosl</a></li>
+      </ul>
+    </div>
+
+    <div class="step" id="keep-calm" data-x="2000" data-rotate="90" data-z="1200"  >
+      <div class="speaker-notes">Destacar el hecho del cambio de mentalidad, búsqueda de la calma y no de la urgencia</div>
+
+      <span class="icon fi-checkbox"></li>
+      <span>Keep</span>
+      <span>calm</span>
+      <span class="small">and</span>
+      <span>test</span>
+      <span>first</span>
+    </div>
+
+    <div class="step" id="historia-usuario-principal" data-x="2000"  >
+      <div class="speaker-notes">La charla está organizada en plan BDD. Esta es la "épica de aceptación". Después, cada sección es un "test unitario". Esto no hay que contarlo ahora, sino que se dejará claro al hablar de BDD.</div>
+
+      <p class="user-story">
+        <span>Como <span class="role">desarrollador</span></span>
+        <span>quiero <span class="goal">conocer lo esencial del <span>testing</span></span></span>
+          <span>para <span class="benefit">usarlo si me resulta conveniente</span></span>
+    </div>
+
+    <div class="step test" data-x="5000"  >
+      <div class="speaker-notes">Cuando marquemos algo como @Test es para preguntar a los asistentes. Es de esperar que no se llegue al 50%, por eso presuponemos un rojo (diapositiva siguiente). En caso de que para algún tema (como los introductorios) obtuviésemos "un verde" podríamos pasar mucho más rápido. Al final de la sección volveríamos a preguntar, esperando que los asistentes levanten la mano superando el 50%. Si no es así, hay que resolver dudas hasta pasar. Al final podemos recoger feedback y preguntas generales ("refactor").</div>
+
+      <span class="code annotation">@Test</span>
+      <p>Los desarrolladores utilizan <strong>testing</strong> con frecuencia en su trabajo diario</p>
+    </div>
+
+    <div class="step tdd-red" data-x="7000"  data-rotate="90">
+      <span class="fi-minus-circle"></span>
+    </div>
+
+    <div class="step slide" id="indice" data-x="8500">
+      <div class="speaker-notes">La idea de esto es el listado de tests que se ocurren para justo después, como en el TDD by Example.</div>
+
+      <h1 class="code comment task">// TODO: tests pendientes</h1>
+      <!-- // TODO: estaría bien separar estos puntos en slides diferentes -->
+      <ol>
+        <li>Visualizar la <strong>conveniencia</strong> de hacer tests</li>
+        <li>Explicar una <strong>herramienta básica</strong>.</li>
+        <li>Ejemplificar <strong>TDD</strong>.</li>
+        <li>Explicar <strong>herramientas auxiliares</strong>: doubles (mocks, stubs), fixtures, testdatabuilders…</li>
+        <li>Mostrar un caso lo más <strong>real</strong> posible.</li>
+      </ol>
+    </div>
+
+    <div class="step" data-x="10000">
+      <a href="http://github.com/juanignaciosl/ptd" class="github">github.com/juanignaciosl/ptd</a>
+    </div>
+
+    <div class="step" id="empezamos" data-x="12000">
+      <h1>¿Empezamos?</h1>
+      <img class="splash bigger" src="../resources/img/conanexcitedjumpingGIF.gif">
+    </div>
+</div>
+
+<!--
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+    
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+    
+    ...
+    
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+    
+    Just sayin' ;)
+    
+-->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="../resources/js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>

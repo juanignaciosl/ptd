@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>PTD #2: JUnit</title>
+    <meta name="description" content="Introducción al testing y a los diferentes conceptos que le rodean: mocks, stubs, TDD, BDD, ATDD..." />
+    <meta name="author" content="Juan Ignacio Sánchez Lara" />
+
+    <link href='http://fonts.googleapis.com/css?family=Kristi|Pontano+Sans|Oxygen|Spinnaker|Paytone+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Mono|Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="../resources/css/foundation-icons/foundation-icons.css" rel="stylesheet" />
+    <link href="../resources/css/impress-demo.css" rel="stylesheet" />
+    <link href="../resources/css/pucela_testing_days.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+  <p>Tú molas, pero tu navegador no tanto. Para que funcione la presentación como te mereces tienes que abrirla con <b>Chrome</b>, <b>Safari</b> o <b>Firefox</b>.</p>
+</div>
+
+<div id="impress">
+
+    <div class="step slide" id="portada" data-x="0"  data-z="1200"  >
+      <h1>PTD</h2>
+      <h2>Pucela Testing Days</h2>
+
+      <img src="../resources/img/agilecyl.png" class="agilecyl" />
+
+      <ul>
+        <li><a rel="author" href="http://www.nhpatt.com">Javier Gamarra ::: @nhpatt</a></li>
+        <li><a rel="author" href="http://www.juanignaciosl.com">Juan Ignacio Sánchez ::: @juanignaciosl</a></li>
+      </ul>
+    </div>
+
+    <div class="step" id="keep-calm" data-x="2000" data-rotate="90" data-z="1200"  >
+      <div class="speaker-notes">Vamos a hablar de por qué hacemos tests, y lo fundamental es que pretenden cambiar el sentido de urgencia, de ahí la elección del chiste malo.</div>
+
+      <span class="fi-wrench icon"></span>
+      <span>JUnit</span>
+      <span class="small">+</span>
+      <span class="small">Hamcrest</span>
+    </div>
+
+    <div class="step test" data-x="4000">
+      <span class="code annotation">@Test</span>
+      <p class="small">Los desarrolladores conocen <strong>JUnit 4</strong> y <strong>Hamcrest</strong></p>
+    </div>
+
+    <div class="step tdd-red" data-x="6000" data-rotate="90">
+      <span class="fi-minus-circle"></span>
+    </div>
+
+    <div class="step" data-x="8000">
+      <h1>Let's code!</h1>
+      <img class="splash bigger" src="../resources/img/joys/coding.gif">
+    </div>
+
+    <div class="step" data-x="8000" data-z="-2000">
+      <a href="http://github.com/juanignaciosl/ptd-junit" class="github">github.com/juanignaciosl/ptd-junit</a>
+    </div>
+
+    <div class="step" data-x="10000">
+      <dl>
+        <dt class="code tag">000-base</dt>
+        <dd>Proyecto base</dd>
+      </dl>
+    </div>
+
+    <div class="step" data-x="12000">
+      <dl>
+        <dt class="code tag">010-running</dt>
+        <dd>
+          <ul>
+            <li>Lanzar tests</li>
+            <li>Esperar excepciones</li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+
+    <div class="step" data-x="14000">
+      <dl>
+        <dt class="code tag">020-asserting</dt>
+        <dd>Especificar qué se espera del código.</dd>
+      </dl>
+    </div>
+
+    <div class="step" data-x="16000">
+      <dl>
+        <dt class="code tag">030-fixturing</dt>
+        <dd>DRY!</dd>
+      </dl>
+    </div>
+
+    <div class="step" data-x="18000">
+      <dl>
+        <dt class="code tag">040-hamcrest</dt>
+        <dd>Más y más legibles aserciones</dd>
+      </dl>
+    </div>
+
+    <div class="step" data-x="20000">
+      <dl>
+        <dt class="code tag">050-parameters</dt>
+        <dd>Parámetros</dd>
+      </dl>
+    </div>
+
+    <div class="step" data-x="22000">
+      <h1>JUnit tiene más cosas...</h1>
+      <ul>
+        <li>Test runners</li>
+        <li>Suites</li>
+        <li>Orden</li>
+        <li>Asunciones</li>
+        <li>Reglas</li>
+        <li>Teorías</li>
+        <li>Categorías</li>
+        <li>...</li>
+      </ul>
+      <p>... utilícese con precaución</p>
+      <a class="source" href="https://github.com/junit-team/junit/wiki">JUnit wiki</a>
+    </div>
+
+    <div class="step" data-x="24000">
+      <h1><em>Buenos</em> tests unitarios</h1>
+      <ul class="acronym">
+        <li><strong>F</strong>ast</li>
+        <li><strong>I</strong>solated</li>
+        <li><strong>R</strong>epeatable</li>
+        <li><strong>S</strong>elf-verifying</li>
+        <li><strong>T</strong>imely</li>
+      </ul>
+
+</div>
+
+<script src="../resources/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>

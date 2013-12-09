@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>PTD #3: TDD</title>
+    <meta name="description" content="Introducción al testing y a los diferentes conceptos que le rodean: mocks, stubs, TDD, BDD, ATDD..." />
+    <meta name="author" content="Javier Gamarra && Juan Ignacio Sánchez Lara" />
+
+    <link href='http://fonts.googleapis.com/css?family=Kristi|Pontano+Sans|Oxygen|Spinnaker|Paytone+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Mono|Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="../resources/css/foundation-icons/foundation-icons.css" rel="stylesheet" />
+    <link href="../resources/css/impress-demo.css" rel="stylesheet" />
+    <link href="../resources/css/pucela_testing_days.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+  <p>Tú molas, pero tu navegador no tanto. Para que funcione la presentación como te mereces tienes que abrirla con <b>Chrome</b>, <b>Safari</b> o <b>Firefox</b>.</p>
+</div>
+
+<div id="impress">
+
+    <div class="step slide" id="portada" data-x="0"  data-z="1200"  >
+      <h1>PTD</h1>
+      <h2>Pucela Testing Days</h2>
+
+      <img src="../resources/img/agilecyl.png" class="agilecyl" />
+
+      <ul>
+        <li><a rel="author" href="http://www.nhpatt.com">Javier Gamarra ::: @nhpatt</a></li>
+        <li><a rel="author" href="http://www.juanignaciosl.com">Juan Ignacio Sánchez ::: @juanignaciosl</a></li>
+      </ul>
+    </div>
+
+    <div class="step" id="keep-calm" data-x="2000" data-rotate="90" >
+        <span class="fi-wrench icon"></span>
+        <span><strong>Test</strong></span>
+        <span><strong>Driven</strong></span>
+        <span><strong>Development</strong></span>
+    </div>
+
+    <div class="step test" data-x="4000">
+        <span class="code annotation">@Test</span>
+        <p class="small">Los desarrolladores saben qué es <strong>TDD</strong> y el ciclo de desarrollo</p>
+    </div>
+
+    <div class="step tdd-red" data-x="6000" data-rotate="90">
+        <span class="fi-minus-circle"></span>
+    </div>
+
+    <div class="step reference-excerpt" data-x="8000" data-z="8000">
+        <img src="../resources/img/tdd/burndown.png" />
+        <h1>Requisitos...</h1>
+    </div>
+
+    <div class="step reference-excerpt" data-x="10000" data-z="8000">
+        <img src="../resources/img/tdd_flow.png" />
+        <h1>Flujo de TDD</h1>
+    </div>
+
+    <div class="step" data-x="12000">
+        <h1>Let's code!</h1>
+    </div>
+
+    <div class="step" data-x="14000">
+        <a href="http://github.com/nhpatt/ptd-tdd" class="github">github.com/nhpatt/ptd-tdd</a>
+    </div>
+
+    <div class="step" data-x="16000">
+        <dl>
+            <dt class="code tag">000-base</dt>
+            <dd>Proyecto vacío</dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="18000">
+        <img src="../resources/img/tdd/burndown.png" />
+        <h1>¿Por dónde empezamos?</h1>
+    </div>
+
+    <div class="step" data-x="20000">
+        <img class="splash" src="../resources/img/joys/flipando.gif">
+        <h1>Hemos empezado!</h1>
+    </div>
+
+    <div class="step" data-x="22000">
+        <dl>
+            <dt class="code tag">010-Empezamos</dt>
+            <dd>Objetivos asequibles</dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="24000">
+        <dl>
+            <dt class="code tag">020-enddate</dt>
+            <dd>Camino fácilmente marcado</dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="26000">
+        <dl>
+            <dt class="code tag">030-days</dt>
+            <dd>Pasos cortos si no tengo confianza</dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="28000">
+        <dl>
+            <dt class="code tag">040-user_stories</dt>
+            <dd>API ideal</dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="30000">
+        <img class="splash" src="../resources/img/joys/error.gif">
+        <h1>A veces no funcionará... pero tests</h1>
+    </div>
+
+    <div class="step" data-x="32000">
+        <dl>
+            <dt class="code tag">050-estimates</dt>
+            <dd></dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="34000">
+        <h2>Progreso ideal?</h2>
+    </div>
+
+    <div class="step" data-x="36000">
+        <dl>
+            <dt class="code tag">060-triangulation</dt>
+            <dd>Triangulación</dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="38000">
+        <img class="splash" src="../resources/img/joys/celebrando.gif">
+    </div>
+
+    <div class="step" data-x="40000">
+    <dl>
+        <dt class="code tag">070-real_progress</dt>
+        <dd></dd>
+    </dl>
+</div>
+
+    <div class="step" data-x="42000">
+        <dl>
+            <dt class="code tag">080-graph</dt>
+            <dd></dd>
+        </dl>
+    </div>
+
+    <div class="step" data-x="44000">
+        <img class="splash" src="../resources/img/joys/funciona.gif">
+    </div>
+
+    <div class="step" data-x="46000">
+        <h1>Resumiendo...</h1>
+        <ul> <li>Éxito y fracasos rápidos (feedback!)</li>
+            <li>Reducir el scope</li>
+            <li>API ideal (diseño!)</li>
+            <li>Métodos pequeños, aplicación más testeable</li>
+            <li>Tests! (escritos antes)</li>
+            </ul>
+    </div>
+
+    <div class="step" data-x="48000">
+        <img class="splash" src="../resources/img/joys/destrozarteclado.gif">
+        <h1>Al final del día</h1>
+    </div>
+
+    <div class="step" data-x="50000">
+        <img src="../resources/img/hands-up.jpg" class="splash bigger" />
+        <h1>¡Preguntas!</h1>
+    </div>
+
+</div>
+
+<script src="../resources/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>

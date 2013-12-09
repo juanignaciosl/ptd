@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>PTD A: referencias</title>
+    
+    <meta name="description" content="Introducción al testing y a los diferentes conceptos que le rodean: mocks, stubs, TDD, BDD, ATDD..." />
+    <meta name="author" content="Juan Ignacio Sánchez Lara" />
+
+    <link href='http://fonts.googleapis.com/css?family=Kristi|Pontano+Sans|Oxygen|Spinnaker|Paytone+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Mono|Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="../resources/css/foundation-icons/foundation-icons.css" rel="stylesheet" />
+    <link href="../resources/css/impress-demo.css" rel="stylesheet" />
+    <link href="../resources/css/pucela_testing_days.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported references">
+
+<div class="fallback-message">
+  <p>Tú molas, pero tu navegador no tanto. Para que funcione la presentación como te mereces tienes que abrirla con <b>Chrome</b>, <b>Safari</b> o <b>Firefox</b>.</p>
+</div>
+
+<div id="impress">
+    <div class="step slide" id="portada" data-x="0"  data-z="1200"  >
+      <div class="speaker-notes"></div>
+
+      <h1>PTD</h2>
+      <h2>Pucela Testing Days</h2>
+
+      <img src="../resources/img/agilecyl.png" class="agilecyl" />
+
+      <ul>
+        <li><a rel="author" href="http://www.nhpatt.com">Javier Gamarra ::: @nhpatt</a></li>
+        <li><a rel="author" href="http://www.juanignaciosl.com">Juan Ignacio Sánchez ::: @juanignaciosl</a></li>
+      </ul>
+    </div>
+
+    <div class="step" id="keep-calm" data-x="2000" data-rotate="90" data-z="1200"  >
+
+      <span class="icon fi-book"></li>
+      <span>Referencias</span>
+    </div>
+
+
+    <div class="step slide" data-x="10000">
+      <h1>TDD</h1>
+      <ul class="books">
+        <li><a href="http://www.amazon.com/Test-Driven-Development-By-Example/dp/0321146530"><img src="../resources/img/books/tdd_by_example.jpg" class="cover" /></a></li>
+        <li><a href="http://www.amazon.com/dp/1932394850"><img src="../resources/img/books/test-driven.jpg" class="cover" /></a></li>
+        <li><a href="http://www.amazon.com/dp/0201485672"><img src="../resources/img/books/refactoring.jpg" class="cover" /></a></li>
+      </ul>
+    </div>
+
+    <div class="step slide" data-x="12000">
+      <h1>TDD</h1>
+      <ul class="books">
+        <li><a href="http://www.amazon.com/dp/0321503627"><img src="../resources/img/books/goos.jpg" class="cover" /></a></li>
+        <li><a href="http://www.amazon.com/dp/0131177052"><img src="../resources/img/books/legacy.jpg" class="cover" /></a></li>
+        <li><a href="http://www.amazon.com/dp/0321278658"><img src="../resources/img/books/xp.jpg" class="cover" /></a></li>
+      </ul>
+    </div>
+
+    <div class="step slide" data-x="14000">
+      <h1>BDD</h1>
+      <ul>
+        <li><a href="http://dannorth.net/introducing-bdd/">Dan North - Introducing BDD</a></li>
+        <li><a href="http://lizkeogh.com/2009/11/06/translating-tdd-to-bdd/">Translating TDD to BDD</a></li>
+      </ul>
+    </div>
+
+    <div class="step slide" data-x="16000">
+      <h1>Presentaciones</h1>
+      <ul>
+        <li><a href="https://twitter.com/kinisoftware">@kinisoftware</a> - <a href="../resources/AdictoAlVerde.pdf">Adicto al verde</a> (y <a href="http://www.youtube.com/watch?v=6GAOSwwstO4">vídeo</a>)</li>
+        <li><a href="https://twitter.com/alexsotob">Alex Soto</a> - <a href="http://es.slideshare.net/asotobu/resistance-is-futile-mocks-will-be-assimilated">Resistance is Futile, Mocks Will be Assimilated</a></li>
+      </ul>
+    </div>
+</div>
+
+<script src="../resources/js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>

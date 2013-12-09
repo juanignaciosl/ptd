@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>PTD #5: Full Picture</title>
+    <meta name="description" content="Introducción al testing y a los diferentes conceptos que le rodean: mocks, stubs, TDD, BDD, ATDD..." />
+    <meta name="author" content="Juan Ignacio Sánchez Lara" />
+
+    <link href='http://fonts.googleapis.com/css?family=Kristi|Pontano+Sans|Oxygen|Spinnaker|Paytone+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Mono|Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="../resources/css/foundation-icons/foundation-icons.css" rel="stylesheet" />
+    <link href="../resources/css/impress-demo.css" rel="stylesheet" />
+    <link href="../resources/css/pucela_testing_days.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+  <p>Tú molas, pero tu navegador no tanto. Para que funcione la presentación como te mereces tienes que abrirla con <b>Chrome</b>, <b>Safari</b> o <b>Firefox</b>.</p>
+</div>
+
+<div id="impress">
+
+    <div class="step slide" id="portada" data-x="0"  data-z="1200"  >
+      <h1>PTD</h2>
+      <h2>Pucela Testing Days</h2>
+
+      <img src="../resources/img/agilecyl.png" class="agilecyl" />
+
+      <ul>
+        <li><a rel="author" href="http://www.nhpatt.com">Javier Gamarra ::: @nhpatt</a></li>
+        <li><a rel="author" href="http://www.juanignaciosl.com">Juan Ignacio Sánchez ::: @juanignaciosl</a></li>
+      </ul>
+    </div>
+
+    <div class="step" id="keep-calm" data-x="2000" data-rotate="90" data-z="1200"  >
+      <div class="speaker-notes">Ciclo completo.</div>
+
+      <span class="fi-loop icon"></li>
+      <span class="small">De</span>
+      <span>cabo</span>
+      <span class="small">a</span>
+      <span>rabo</span>
+    </div>
+
+    <div class="step test" data-x="4000">
+      <span class="code annotation">@Test</span>
+      <p class="small">Los desarrolladores pueden implementar un flujo completo desde la <strong>captura de requisitos</strong> a la <strong>aceptación de usuario</strong> siempre <strong>guiados por tests</strong></p>
+    </div>
+
+    <div class="step tdd-red" data-x="6000" data-rotate="90">
+      <span class="fi-minus-circle"></span>
+    </div>
+
+    <div class="step " data-x="8000">
+      <a href="http://github.com/juanignaciosl/ptd-junit" class="github">github.com/juanignaciosl/ptd-full-picture</a>
+    </div>
+
+    <div class="step quote dialog product_owner" data-x="10000">
+      <div class="from">Gustavo</div>
+      <p>Quiero monitorizar la temperatura de la cubeta</p>
+    </div>
+
+    <div class="step quote dialog lead_developer" data-x="12000">
+      <div class="from">Heisenberg</div>
+      <p>¿Podrías <em>por favor</em> darme algún detalle más?</p>
+    </div>
+
+    <div class="step quote dialog product_owner" data-x="14000">
+      <div class="from">Gustavo</div>
+      <p class="long">Quiero que si la cubeta está a 30º una página me diga que está a 30º. Quiero ver una gráfica con la media de los últimos 7 días. Ah, y estaría bien que si la temperatura actual es superior a la media de los últimos 7 días, la temperatura salga en rojo.</p>
+    </div>
+
+    <div class="step" data-x="16000">
+      <div class="code command-line long">mvn archetype:generate -DarchetypeArtifactId=jboss-javaee6-webapp -DarchetypeGroupId=org.jboss.spec.archetypes -DgroupId=com.juanignaciosl.ptd.fullpicture -DartifactId=ptd-full-picture -DinteractiveMode=false</div>
+      <p>... e importar en Eclipse y lanzar en JBoss 7</p>
+    </div>
+
+    <div class="step" data-x="18000">
+      <dl>
+        <dt class="code tag">000-base</dt>
+        <dd>Proyecto base</dd>
+      </dl>
+    </div>
+
+    <div class="step" data-x="20000">
+      <h1>ATDD</h1>
+      <img src="../resources/img/atdd.png" />
+    </div>
+
+    <div class="step" data-x="22000">
+      <h1>Mis objetivos*</h1>
+      <ul>
+        <li>Comunicarme con el usuario</li>
+        <li>Documentar el sistema</li>
+        <li>Verificar funcionamiento</li>
+      </ul>
+      <p class="side-note">*: si no te gustan, tengo otros</p>
+    </div>
+
+    <div class="step" data-x="24000">
+      <h1>Concordion + Selenium</h1>
+
+      <div>
+        <a href="http://www.concordion.org/">www.concordion.org</a>
+        <ul>
+          <li>Centrado en la legibilidad para usuario final</li>
+          <li>Especificación en HTML</li>
+          <li>Simple</li>
+        </ul>
+      </div>
+
+      <div>
+        <a href="http://http://www.seleniumhq.org">www.seleniumhq.org</a>
+        <ul>
+          <li>Headless browser</li>
+          <li>Ampliamente <strike>odiado</strike> utilizado</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step" data-x="26000">
+      <dl>
+        <dt class="code tag">010-acceptance-spec</dt>
+        <dd>
+          Especificación de la aceptación:
+          <ol>
+            <li>Especificación y fixture</li>
+            <li>Page object</li>
+        </dd>
+      </dl>
+    </div>
+
+    <div class="step" data-x="28000">
+      <h1>I. Especificación y fixture</h1>
+      <img src="../resources/img/Concordion-HowItWorks.png" class="splash" />
+      <p>Especificación, separando requisito de implementación</p>
+    </div>
+
+    <div class="step" data-x="30000">
+      <h1>II. Page objects</h1>
+      <img src="../resources/img/pageObject.png" class="splash" />
+      <p>Encapsulan y abstraen los detalles del UI</p>
+      <a href="http://martinfowler.com/bliki/PageObject.html">Page Object - Martin Fowler</a>
+    </div>
+
+    <div class="step" data-x="32000">
+      <dl>
+        <dt class="code tag">020-bucket-temperature-simulator</dt>
+        <dd>Implementación de un mock de la cubeta</dd>
+      </dl>
+    </div>
+
+    <div class="step" data-x="34000">
+      <dl>
+        <dt class="code tag">030-week-temperature-spec</dt>
+        <dd>Especificación de la temperatura semanal</dd>
+      </dl>
+    </div>
+
+    <div class="step" data-x="36000">
+      <div class="code comment">// TODO: pasos siguientes</div>
+      <ol>
+        <li>Calcular media de temperaturas almacenadas</li>
+        <li>Mostrar 7 medias de días previos</li>
+      </ol>
+    </div>
+
+    <div class="step" data-x="38000">
+      <h1>Persistencia -> Test de Integración</h1>
+      <h1>Arquillian</h1>
+      <ul>
+        <li>Despliega el test en el servidor</li>
+        <li class="fi-like icon">Real</li>
+        <li class="fi-dislike icon">Lento</li>
+      </ul>
+    </div>
+
+    <div class="step" data-x="40000">
+      <dl>
+        <dt class="code tag">040-temperature</dt>
+      </dl>
+    </div>
+
+    <div class="step" data-x="42000">
+      <h1><strike>(Database) Fixtures</strike></h1>
+      <h1><em>Test</em>DataBuilders</h1>
+      <ul>
+        <li>Mantenibles</li>
+        <li>Escalables (cantidad y variabilidad)</li>
+      </ul>
+    </div>
+
+    <div class="step" data-x="44000">
+      <dl>
+        <dt class="code tag">050-temperature-average</dt>
+      </dl>
+    </div>
+
+    <div class="step" data-x="46000">
+      <dl>
+        <dt class="code tag">060-week-temperature</dt>
+      </dl>
+    </div>
+
+    <div class="step" data-x="48000">
+      <dl>
+        <dt class="code tag">070-temperature-alarm</dt>
+      </dl>
+    </div>
+
+    <div class="step" data-x="50000">
+      <h1>Resumen</h1>
+      <ol>
+        <li>Requisitos en especificación ejecutable</li>
+        <li>Aceptación end-to-end</li>
+        <li>Patrones fixture y page object para especificación mantenible</li>
+        <li>Test de integración para pruebas contra bbdd</li>
+        <li>TestDataBuilder para datos de prueba mantenibles</li>
+      </ol>
+    </div>
+
+    <div class="step" data-x="52000">
+      <h1>¡Preguntas!</h1>
+      <img src="../resources/img/breaking_bad/high-five.gif" class="splash bigger" />
+    </div>
+
+</div>
+
+<script src="../resources/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
