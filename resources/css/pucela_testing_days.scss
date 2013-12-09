@@ -423,6 +423,19 @@ html {
       font-size: 600%;
       line-height: 200%;
 
+      &.gh-pages {
+        font-size: 200%;
+
+        h1 {
+          font-size: $gr3;
+          margin: $gr0;
+        }
+
+        ol {
+          margin: 0 $gr2 0 $gr5;
+        }
+      }
+
       .agilecyl {
         position: absolute;
         bottom: 10px;

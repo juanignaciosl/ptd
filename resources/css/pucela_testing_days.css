@@ -274,6 +274,13 @@ html body {
     text-align: center;
     font-size: 600%;
     line-height: 200%; }
+    html body #portada.gh-pages {
+      font-size: 200%; }
+      html body #portada.gh-pages h1 {
+        font-size: 101.65922px;
+        margin: 24px; }
+      html body #portada.gh-pages ol {
+        margin: 0 62.83018px 0 266.13612px; }
     html body #portada .agilecyl {
       position: absolute;
       bottom: 10px;
